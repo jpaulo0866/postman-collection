@@ -1,0 +1,2039 @@
+{
+	"info": {
+		"_postman_id": "d5a1bb7f-2778-4413-b325-14cfbe2659f9",
+		"name": "Review coupon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sp24",
+			"item": [
+				{
+					"name": "Get coupon by id STG - BFF",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "Wu8J1uo9LNMI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coupon/6753",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"omni-dashboard-bff",
+								"v1",
+								"coupon",
+								"6753"
+							],
+							"query": [
+								{
+									"key": "app-token",
+									"value": "Wu8J1uo9LNMI",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get coupon by id STG - coupon-service",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"type": "text",
+								"value": "Wu8J1uo9LNMI"
+							}
+						],
+						"url": {
+							"raw": "http://kb8shml.dimed.com.br/coupon/v1/coupon/6753",
+							"protocol": "http",
+							"host": [
+								"kb8shml",
+								"dimed",
+								"com",
+								"br"
+							],
+							"path": [
+								"coupon",
+								"v1",
+								"coupon",
+								"6753"
+							],
+							"query": [
+								{
+									"key": "app-token",
+									"value": "Wu8J1uo9LNMI",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get coupon item by id STG",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"type": "text",
+								"value": "Wu8J1uo9LNMI"
+							}
+						],
+						"url": {
+							"raw": "http://kb8shml.dimed.com.br/coupon/v1/coupon/6753/item",
+							"protocol": "http",
+							"host": [
+								"kb8shml",
+								"dimed",
+								"com",
+								"br"
+							],
+							"path": [
+								"coupon",
+								"v1",
+								"coupon",
+								"6753",
+								"item"
+							],
+							"query": [
+								{
+									"key": "app-token",
+									"value": "Wu8J1uo9LNMI",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Coupon Item - STG",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"columnName\": \"UF\",\n  \"columnType\": \"STRING\",\n  \"columnValue\": \"RS\",\n  \"relationalOperator\": \"EQUAL\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://kb8shml.dimed.com.br/coupon/v1/coupon/6753/item",
+							"protocol": "http",
+							"host": [
+								"kb8shml",
+								"dimed",
+								"com",
+								"br"
+							],
+							"path": [
+								"coupon",
+								"v1",
+								"coupon",
+								"6753",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Coupon - MESSAGE - STG",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Teste 123\",\n    \"detailedDescription\": \"Teste  123\",\n    \"idCampaign\": 1,\n    \"pub\": true,\n    \"active\": false,\n    \"cuponable\": true,\n    \"limitUses\": 1,\n    \"individualUses\": 1,\n    \"startDate\": \"22/10/2020 00:00:00\",\n    \"endDate\": \"30/12/2020 00:00:00\",\n    \"durationDays\": 1,\n    \"promocode\": \"PROMOCODE\",\n    \"dynamicPromocode\": true,\n    \"discountType\": \"MESSAGE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://kb8shml.dimed.com.br/coupon/v1/coupon/6753",
+							"protocol": "http",
+							"host": [
+								"kb8shml",
+								"dimed",
+								"com",
+								"br"
+							],
+							"path": [
+								"coupon",
+								"v1",
+								"coupon",
+								"6753"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Coupon - FIXED_PRICE - STG Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Teste 123\",\n    \"detailedDescription\": \"Teste  123\",\n    \"idCampaign\": 1,\n    \"pub\": true,\n    \"active\": false,\n    \"cuponable\": true,\n    \"limitUses\": 1,\n    \"individualUses\": 1,\n    \"startDate\": \"22/10/2020 00:00:00\",\n    \"endDate\": \"30/12/2020 00:00:00\",\n    \"durationDays\": 1,\n    \"promocode\": \"PROMOCODE\",\n    \"dynamicPromocode\": true,\n    \"discountType\": \"FIXED_PRICE\",\n    \"price\": 50.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://kb8shml.dimed.com.br/coupon/v1/coupon/6753",
+							"protocol": "http",
+							"host": [
+								"kb8shml",
+								"dimed",
+								"com",
+								"br"
+							],
+							"path": [
+								"coupon",
+								"v1",
+								"coupon",
+								"6753"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST coupon - BFF",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "Wu8J1uo9LNMI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"active\": true,\n    \"cuponable\": true,\n    \"description\": null,\n    \"detailedDescription\": \"string\",\n    \"discountPercentage\": 1,\n    \"discountType\": 1,\n    \"durationDays\": 1,\n    \"dynamicPromocode\": true,\n    \"endDate\": \"30/12/2020 00:00:00\",\n    \"idCampaign\": 1,\n    \"individualUses\": 1,\n    \"limitUses\": 1,\n    \"promocode\": \"PROMOCODE\",\n    \"pub\": true,\n    \"rabateValue\": 1,\n    \"rebatePercentage\": 1,\n    \"startDate\": \"22/10/2020 00:00:00\",\n    \"couponItemsRequestList\": [{\n        \"columnName\": \"column name\",\n        \"columnType\": \"STRING\",\n        \"relationalOperator\": \"EQUAL\",\n        \"columnValue\": \"valor\"\n    }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coupon",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"omni-dashboard-bff",
+								"v1",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sp22",
+			"item": [
+				{
+					"name": "Get All Item - Select",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "Wu8J1uo9LNMI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/item",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"omni-dashboard-bff",
+								"v1",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Coverage - Select",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "Wu8J1uo9LNMI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coverage",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"omni-dashboard-bff",
+								"v1",
+								"coverage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Coverage Values - UF",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "Wu8J1uo9LNMI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:9040/omni-dashboard-bff/v1/coverage/filial",
+							"host": [
+								"localhost"
+							],
+							"port": "9040",
+							"path": [
+								"omni-dashboard-bff",
+								"v1",
+								"coverage",
+								"filial"
+							],
+							"query": [
+								{
+									"key": "app-token",
+									"value": "Wu8J1uo9LNMI",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Column Types Options",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "uIFksS4Di0LM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/coupon/v1/coupon/column-type",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"coupon",
+								"v1",
+								"coupon",
+								"column-type"
+							],
+							"query": [
+								{
+									"key": "app-token",
+									"value": "Wu8J1uo9LNMI",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Column Type Detail",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "uIFksS4Di0LM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/coupon/v1/coupon/column-type/STRING",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"coupon",
+								"v1",
+								"coupon",
+								"column-type",
+								"STRING"
+							],
+							"query": [
+								{
+									"key": "app-token",
+									"value": "Wu8J1uo9LNMI",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sp25",
+			"item": [
+				{
+					"name": "BFF DELETE Coupon Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "Wu8J1uo9LNMI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coupon/6753/customer/298",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"omni-dashboard-bff",
+								"v1",
+								"coupon",
+								"6753",
+								"customer",
+								"298"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BFF DELETE Coupon Item",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "Wu8J1uo9LNMI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coupon/6758/item/253",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"omni-dashboard-bff",
+								"v1",
+								"coupon",
+								"6758",
+								"item",
+								"253"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Coupon DELETE Coupon Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "app-token",
+								"type": "text",
+								"value": "5uzE63aFoTgZ"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/coupon/v1/coupon/8777/customer/298",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"coupon",
+								"v1",
+								"coupon",
+								"8777",
+								"customer",
+								"298"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Coupon DELETE Coupon Item",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "app-token",
+								"type": "text",
+								"value": "5uzE63aFoTgZ"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/coupon/v1/coupon/8777/item/298",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"coupon",
+								"v1",
+								"coupon",
+								"8777",
+								"item",
+								"298"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Full Coupon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"couponCoverages\": [\n    {\n      \"columnName\": \"string\",\n      \"columnType\": \"BOOLEAN\",\n      \"columnValue\": \"string\",\n      \"relationalOperator\": \"EQUAL\"\n    }\n  ],\n  \"couponCustomers\": [\n    {\n      \"columnName\": \"string\",\n      \"columnType\": \"BOOLEAN\",\n      \"columnValue\": \"string\",\n      \"relationalOperator\": \"EQUAL\"\n    }\n  ],\n  \"couponData\": {\n    \"active\": true,\n    \"cuponable\": true,\n    \"description\": \"string\",\n    \"detailedDescription\": \"string\",\n    \"discountType\": \"MESSAGE\",\n    \"durationDays\": 1,\n    \"dynamicPromocode\": true,\n    \"endDate\": \"20/01/2020 00:00:00\",\n    \"idCampaign\": null,\n    \"individualUses\": 1,\n    \"limitUses\": 1,\n    \"promocode\": \"string\",\n    \"pub\": true,\n    \"startDate\": \"20/01/2020 00:00:00\"\n  },\n  \"couponItems\": [\n    {\n      \"columnName\": \"string\",\n      \"columnType\": \"BOOLEAN\",\n      \"columnValue\": \"string\",\n      \"relationalOperator\": \"EQUAL\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/coupon/v1/coupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"coupon",
+								"v1",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Full Coupon With Null",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"couponData\": {\n    \"active\": true,\n    \"cuponable\": true,\n    \"description\": \"string\",\n    \"detailedDescription\": \"string\",\n    \"discountType\": \"MESSAGE\",\n    \"durationDays\": 1,\n    \"dynamicPromocode\": true,\n    \"endDate\": \"20/01/2020 00:00:00\",\n    \"idCampaign\": null,\n    \"individualUses\": 1,\n    \"limitUses\": 1,\n    \"promocode\": \"string\",\n    \"pub\": true,\n    \"startDate\": \"20/01/2020 00:00:00\"\n  },\n  \"couponItems\": [\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/coupon/v1/coupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"coupon",
+								"v1",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BFF POST Full Coupon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"couponCoverages\": [\n    {\n      \"columnName\": \"string\",\n      \"columnType\": \"BOOLEAN\",\n      \"columnValue\": \"string\",\n      \"relationalOperator\": \"EQUAL\"\n    }\n  ],\n  \"couponCustomers\": [\n    {\n      \"columnName\": \"string\",\n      \"columnType\": \"BOOLEAN\",\n      \"columnValue\": \"string\",\n      \"relationalOperator\": \"EQUAL\"\n    }\n  ],\n  \"couponData\": {\n    \"active\": true,\n    \"cuponable\": true,\n    \"description\": \"string\",\n    \"detailedDescription\": \"string\",\n    \"discountType\": 5,\n    \"durationDays\": 1,\n    \"dynamicPromocode\": true,\n    \"endDate\": \"20/01/2020 00:00:00\",\n    \"idCampaign\": null,\n    \"individualUses\": 1,\n    \"limitUses\": 1,\n    \"promocode\": \"string\",\n    \"pub\": true,\n    \"startDate\": \"20/01/2020 00:00:00\"\n  },\n  \"couponItems\": [\n    {\n      \"columnName\": \"string\",\n      \"columnType\": \"BOOLEAN\",\n      \"columnValue\": \"string\",\n      \"relationalOperator\": \"EQUAL\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9040/omni-dashboard-bff/v1/coupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9040",
+							"path": [
+								"omni-dashboard-bff",
+								"v1",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BFF POST Full Coupon With Null",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"couponCoverages\": [\n  ],\n  \"couponCustomers\": null,\n  \"couponData\": {\n    \"active\": true,\n    \"cuponable\": true,\n    \"description\": \"string\",\n    \"detailedDescription\": \"string\",\n    \"discountType\": 5,\n    \"durationDays\": 1,\n    \"dynamicPromocode\": true,\n    \"endDate\": \"20/01/2020 00:00:00\",\n    \"idCampaign\": null,\n    \"individualUses\": 1,\n    \"limitUses\": 1,\n    \"promocode\": \"string\",\n    \"pub\": true,\n    \"startDate\": \"20/01/2020 00:00:00\"\n  },\n  \"couponItems\": [\n    {\n      \"columnName\": \"string\",\n      \"columnType\": \"BOOLEAN\",\n      \"columnValue\": \"string\",\n      \"relationalOperator\": \"EQUAL\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9040/omni-dashboard-bff/v1/coupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9040",
+							"path": [
+								"omni-dashboard-bff",
+								"v1",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sp01",
+			"item": [
+				{
+					"name": "Get All Customer Attributes Local",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "Wu8J1uo9LNMI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9040/omni-dashboard-bff/v1/coupon?startDate=01/01/2020 00:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9040",
+							"path": [
+								"omni-dashboard-bff",
+								"v1",
+								"coupon"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "01/01/2020 00:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customer Attributes STG",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "Wu8J1uo9LNMI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/customer/attributes",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"omni-dashboard-bff",
+								"v1",
+								"customer",
+								"attributes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Coupon - Ajust Precision",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-token",
+								"value": "uIFksS4Di0LM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-int.grupodimedservices.com.br/tst/coupon/v1/coupon/data/37596",
+							"protocol": "http",
+							"host": [
+								"api-int",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"tst",
+								"coupon",
+								"v1",
+								"coupon",
+								"data",
+								"37596"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Coupon - Ajust Precision BFF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"couponData\": {\n        \"active\": true,\n        \"cuponable\": true,\n        \"description\": \"Teste\",\n        \"detailedDescription\": \"string\",\n        \"discountPercentage\": null,\n        \"discountType\": 2,\n        \"durationDays\": 1,\n        \"dynamicPromocode\": true,\n        \"endDate\": \"30/12/2020 00:00:00\",\n        \"idCampaign\": 1,\n        \"individualUses\": 1,\n        \"limitUses\": 1,\n        \"price\": 150000000,\n        \"promocode\": \"PROMOCODE\",\n        \"pub\": true,\n        \"rabateValue\": 1,\n        \"rebatePercentage\": 1,\n        \"startDate\": \"29/12/2020 00:00:00\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://tst.grupodimedservices.com.br/omni-dashboard-bff/v1/coupon",
+							"protocol": "http",
+							"host": [
+								"tst",
+								"grupodimedservices",
+								"com",
+								"br"
+							],
+							"path": [
+								"omni-dashboard-bff",
+								"v1",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sp02",
+			"item": [
+				{
+					"name": "Alterações de rebatePercentage e rebateValue",
+					"item": [
+						{
+							"name": "Rebate Value Sucesso",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"active\": true,\n    \"cuponable\": true,\n    \"description\": \"Teste rebatePercentage\",\n    \"detailedDescription\": \"Teste rebatePercentage\",\n    \"discountPercentage\": 5,\n    \"discountType\": \"PERCENTAGE_DISCOUNT\",\n    \"durationDays\": 1,\n    \"dynamicPromocode\": true,\n    \"individualUses\": 1,\n    \"limitUses\": 1000,\n    \"startDate\": \"30/01/2021 00:00:00\",\n    \"endDate\": \"15/02/2021 00:00:00\",\n    \"pub\": true,\n    \"rebateValue\": 1000,\n    \"rebatePercentage\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/data",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Rebate Percentage Sucesso",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"active\": true,\n    \"cuponable\": true,\n    \"description\": \"Teste rebatePercentage\",\n    \"detailedDescription\": \"Teste rebatePercentage\",\n    \"discountPercentage\": 5,\n    \"discountType\": \"PERCENTAGE_DISCOUNT\",\n    \"durationDays\": 1,\n    \"dynamicPromocode\": true,\n    \"individualUses\": 1,\n    \"limitUses\": 1000,\n    \"startDate\": \"30/01/2021 00:00:00\",\n    \"endDate\": \"15/02/2021 00:00:00\",\n    \"pub\": true,\n    \"rebateValue\": null,\n    \"rebatePercentage\": 5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/data",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Rebate Value e Percentage Nulos Sucesso",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"active\": true,\n    \"cuponable\": true,\n    \"description\": \"Teste rebatePercentage\",\n    \"detailedDescription\": \"Teste rebatePercentage\",\n    \"discountPercentage\": 5,\n    \"discountType\": \"PERCENTAGE_DISCOUNT\",\n    \"durationDays\": 1,\n    \"dynamicPromocode\": true,\n    \"individualUses\": 1,\n    \"limitUses\": 1000,\n    \"startDate\": \"30/01/2021 00:00:00\",\n    \"endDate\": \"15/02/2021 00:00:00\",\n    \"pub\": true,\n    \"rebateValue\": null,\n    \"rebatePercentage\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/data",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"data"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Rebate Value e Percentage Preenchidos Error",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"active\": true,\n    \"cuponable\": true,\n    \"description\": \"Teste rebatePercentage\",\n    \"detailedDescription\": \"Teste rebatePercentage\",\n    \"discountPercentage\": 5,\n    \"discountType\": \"PERCENTAGE_DISCOUNT\",\n    \"durationDays\": 1,\n    \"dynamicPromocode\": true,\n    \"individualUses\": 1,\n    \"limitUses\": 1000,\n    \"startDate\": \"30/01/2021 00:00:00\",\n    \"endDate\": \"15/02/2021 00:00:00\",\n    \"pub\": true,\n    \"rebateValue\": 100,\n    \"rebatePercentage\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/data",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"data"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "BUG listagem de filiais impactadas - CIDADE, CANAL, FILIAL, AREA_SUPERVISAO",
+					"item": [
+						{
+							"name": "Filiais Impactadas - FILIAL",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tamanhoPagina\": 10,\n    \"numeroPagina\": 1,\n    \"filtroTextoFilial\": null,\n    \"filtroColunaFilialImpactadaRequestList\": [\n        {\n            \"nomeColuna\": \"FILIAL\",\n            \"operadorRelacional\": \"EQUAL\",\n            \"valorColuna\": \"31\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/filialvirtual/v1/filialvirtual/pesquisa/filiais-impactadas",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"filialvirtual",
+										"v1",
+										"filialvirtual",
+										"pesquisa",
+										"filiais-impactadas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filiais Impactadas - SUPERVISAO",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tamanhoPagina\": 10,\n    \"numeroPagina\": 1,\n    \"filtroTextoFilial\": null,\n    \"filtroColunaFilialImpactadaRequestList\": [\n        {\n            \"nomeColuna\": \"AREA_SUPERVISAO\",\n            \"operadorRelacional\": \"EQUAL\",\n            \"valorColuna\": \"SUPERVISAO NORTE POA\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/filialvirtual/v1/filialvirtual/pesquisa/filiais-impactadas",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"filialvirtual",
+										"v1",
+										"filialvirtual",
+										"pesquisa",
+										"filiais-impactadas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filiais Impactadas - CIDADES",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tamanhoPagina\": 10,\n    \"numeroPagina\": 1,\n    \"filtroTextoFilial\": null,\n    \"filtroColunaFilialImpactadaRequestList\": [\n        {\n            \"nomeColuna\": \"CIDADE\",\n            \"operadorRelacional\": \"EQUAL\",\n            \"valorColuna\": \"CASCAVEL\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/filialvirtual/v1/filialvirtual/pesquisa/filiais-impactadas",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"filialvirtual",
+										"v1",
+										"filialvirtual",
+										"pesquisa",
+										"filiais-impactadas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filiais Impactadas - UF",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tamanhoPagina\": 10,\n    \"numeroPagina\": 1,\n    \"filtroTextoFilial\": null,\n    \"filtroColunaFilialImpactadaRequestList\": [\n        {\n            \"nomeColuna\": \"UF\",\n            \"operadorRelacional\": \"EQUAL\",\n            \"valorColuna\": \"SC\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/filialvirtual/v1/filialvirtual/pesquisa/filiais-impactadas",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"filialvirtual",
+										"v1",
+										"filialvirtual",
+										"pesquisa",
+										"filiais-impactadas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filiais Impactadas - PUBLICO",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tamanhoPagina\": 10,\n    \"numeroPagina\": 1,\n    \"filtroTextoFilial\": null,\n    \"filtroColunaFilialImpactadaRequestList\": [\n        {\n            \"nomeColuna\": \"PUBLICO\",\n            \"operadorRelacional\": \"EQUAL\",\n            \"valorColuna\": \"SELETIVO\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/filialvirtual/v1/filialvirtual/pesquisa/filiais-impactadas",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"filialvirtual",
+										"v1",
+										"filialvirtual",
+										"pesquisa",
+										"filiais-impactadas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filiais Impactadas - BAIRRO",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tamanhoPagina\": 10,\n    \"numeroPagina\": 1,\n    \"filtroTextoFilial\": null,\n    \"filtroColunaFilialImpactadaRequestList\": [\n        {\n            \"nomeColuna\": \"BAIRRO\",\n            \"operadorRelacional\": \"EQUAL\",\n            \"valorColuna\": \"ZONA 01\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/filialvirtual/v1/filialvirtual/pesquisa/filiais-impactadas",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"filialvirtual",
+										"v1",
+										"filialvirtual",
+										"pesquisa",
+										"filiais-impactadas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filiais Impactadas - Canal Error",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"tamanhoPagina\": 10,\n    \"numeroPagina\": 1,\n    \"filtroTextoFilial\": null,\n    \"filtroColunaFilialImpactadaRequestList\": [\n        {\n            \"nomeColuna\": \"CANAL\",\n            \"operadorRelacional\": \"EQUAL\",\n            \"valorColuna\": \"any\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/filialvirtual/v1/filialvirtual/pesquisa/filiais-impactadas",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"filialvirtual",
+										"v1",
+										"filialvirtual",
+										"pesquisa",
+										"filiais-impactadas"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Integração com o Endpoint PUT de persistencia geral do cupom",
+					"item": [
+						{
+							"name": "Put Coupon - Add",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "app-token",
+										"type": "text",
+										"value": "Wu8J1uo9LNMI"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"couponData\": {\n        \"active\": true,\n        \"cuponable\": true,\n        \"description\": \"Teste\",\n        \"detailedDescription\": \"string\",\n        \"discountPercentage\": null,\n        \"discountType\": 2,\n        \"durationDays\": 1,\n        \"dynamicPromocode\": true,\n        \"endDate\": \"30/03/2021 00:00:00\",\n        \"idCampaign\": 1,\n        \"individualUses\": 1,\n        \"limitUses\": 1,\n        \"price\": 1500,\n        \"promocode\": \"PROMOCODE\",\n        \"pub\": true,\n        \"rebateValue\": 1,\n        \"rebatePercentage\": null,\n        \"startDate\": \"31/01/2021 00:00:00\"\n    },\n    \"couponCoverages\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"UF\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"SC\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponCustomers\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"PERSONA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"BEAUTY\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponItems\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"MARCA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"PANVEL\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coupon/42990",
+									"protocol": "http",
+									"host": [
+										"api-int",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"tst",
+										"omni-dashboard-bff",
+										"v1",
+										"coupon",
+										"42990"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put Coupon - Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "app-token",
+										"type": "text",
+										"value": "Wu8J1uo9LNMI"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"couponData\": {\n        \"active\": true,\n        \"cuponable\": true,\n        \"description\": \"Teste\",\n        \"detailedDescription\": \"string\",\n        \"discountPercentage\": null,\n        \"discountType\": 2,\n        \"durationDays\": 1,\n        \"dynamicPromocode\": false,\n        \"endDate\": \"30/12/2021 00:00:00\",\n        \"idCampaign\": 1,\n        \"individualUses\": 1,\n        \"limitUses\": 1,\n        \"price\": 1500,\n        \"promocode\": \"TESTE\",\n        \"pub\": true,\n        \"rebateValue\": 1,\n        \"rebatePercentage\": null,\n        \"startDate\": \"31/01/2021 00:00:00\"\n    },\n    \"couponCoverages\": [\n        {\n            \"id\": 803,\n            \"action\": \"UPDATE\",\n            \"columnName\": \"UF\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"SC\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponCustomers\": [\n        {\n            \"id\": 610,\n            \"action\": \"UPDATE\",\n            \"columnName\": \"PERSONA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"BEAUTY\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponItems\": [\n        {\n            \"id\": 823,\n            \"action\": \"UPDATE\",\n            \"columnName\": \"MARCA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"PANVEL\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coupon/42990",
+									"protocol": "http",
+									"host": [
+										"api-int",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"tst",
+										"omni-dashboard-bff",
+										"v1",
+										"coupon",
+										"42990"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put Coupon - DELETE",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "app-token",
+										"type": "text",
+										"value": "Wu8J1uo9LNMI"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"couponData\": null,\n    \"couponCoverages\": [\n        {\n            \"id\": 803,\n            \"action\": \"DELETE\",\n            \"columnName\": \"UF\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"SC\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponCustomers\": [\n        {\n            \"id\": 610,\n            \"action\": \"DELETE\",\n            \"columnName\": \"PERSONA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"BEAUTY\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponItems\": [\n        {\n            \"id\": 823,\n            \"action\": \"DELETE\",\n            \"columnName\": \"MARCA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"PANVEL\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coupon/42990",
+									"protocol": "http",
+									"host": [
+										"api-int",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"tst",
+										"omni-dashboard-bff",
+										"v1",
+										"coupon",
+										"42990"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Alterações duration_days - BFF",
+					"item": [
+						{
+							"name": "Duration Days Null",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "app-token",
+										"type": "text",
+										"value": "Wu8J1uo9LNMI"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"couponData\": {\n        \"active\": true,\n        \"cuponable\": true,\n        \"description\": \"Teste\",\n        \"detailedDescription\": \"string\",\n        \"discountPercentage\": null,\n        \"discountType\": 2,\n        \"durationDays\": null,\n        \"dynamicPromocode\": true,\n        \"endDate\": \"30/03/2021 00:00:00\",\n        \"idCampaign\": 1,\n        \"individualUses\": 1,\n        \"limitUses\": 1,\n        \"price\": 1500,\n        \"promocode\": \"PROMOCODE\",\n        \"pub\": true,\n        \"rebateValue\": 1,\n        \"rebatePercentage\": null,\n        \"startDate\": \"31/01/2021 00:00:00\"\n    },\n    \"couponCoverages\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"UF\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"SC\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponCustomers\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"PERSONA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"BEAUTY\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponItems\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"MARCA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"PANVEL\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coupon/42990",
+									"protocol": "http",
+									"host": [
+										"api-int",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"tst",
+										"omni-dashboard-bff",
+										"v1",
+										"coupon",
+										"42990"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Duration Days Zero",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "app-token",
+										"type": "text",
+										"value": "Wu8J1uo9LNMI"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"couponData\": {\n        \"active\": true,\n        \"cuponable\": true,\n        \"description\": \"Teste\",\n        \"detailedDescription\": \"string\",\n        \"discountPercentage\": null,\n        \"discountType\": 2,\n        \"durationDays\": 0,\n        \"dynamicPromocode\": true,\n        \"endDate\": \"30/03/2021 00:00:00\",\n        \"idCampaign\": 1,\n        \"individualUses\": 1,\n        \"limitUses\": 1,\n        \"price\": 1500,\n        \"promocode\": \"PROMOCODE\",\n        \"pub\": true,\n        \"rebateValue\": 1,\n        \"rebatePercentage\": null,\n        \"startDate\": \"31/01/2021 00:00:00\"\n    },\n    \"couponCoverages\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"UF\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"SC\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponCustomers\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"PERSONA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"BEAUTY\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponItems\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"MARCA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"PANVEL\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coupon/42990",
+									"protocol": "http",
+									"host": [
+										"api-int",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"tst",
+										"omni-dashboard-bff",
+										"v1",
+										"coupon",
+										"42990"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Duration Days Negative Error",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "app-token",
+										"type": "text",
+										"value": "Wu8J1uo9LNMI"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"couponData\": {\n        \"active\": true,\n        \"cuponable\": true,\n        \"description\": \"Teste\",\n        \"detailedDescription\": \"string\",\n        \"discountPercentage\": null,\n        \"discountType\": 2,\n        \"durationDays\": -1,\n        \"dynamicPromocode\": true,\n        \"endDate\": \"30/03/2021 00:00:00\",\n        \"idCampaign\": 1,\n        \"individualUses\": 1,\n        \"limitUses\": 1,\n        \"price\": 1500,\n        \"promocode\": \"PROMOCODE\",\n        \"pub\": true,\n        \"rebateValue\": 1,\n        \"rebatePercentage\": null,\n        \"startDate\": \"31/01/2021 00:00:00\"\n    },\n    \"couponCoverages\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"UF\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"SC\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponCustomers\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"PERSONA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"BEAUTY\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ],\n    \"couponItems\": [\n        {\n            \"action\": \"ADD\",\n            \"columnName\": \"MARCA\",\n            \"columnType\": \"STRING\",\n            \"columnValue\": \"PANVEL\",\n            \"relationalOperator\": \"EQUAL\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/coupon/42990",
+									"protocol": "http",
+									"host": [
+										"api-int",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"tst",
+										"omni-dashboard-bff",
+										"v1",
+										"coupon",
+										"42990"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Adição de maxLength na listagem de Atributos de Customer",
+					"item": [
+						{
+							"name": "Get Customer Attributes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "app-token",
+										"value": "Wu8J1uo9LNMI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://api-int.grupodimedservices.com.br/tst/omni-dashboard-bff/v1/customer/attributes",
+									"protocol": "http",
+									"host": [
+										"api-int",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"tst",
+										"omni-dashboard-bff",
+										"v1",
+										"customer",
+										"attributes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Between de StartDate e EndDate para a listagem paginada de cupom",
+					"item": [
+						{
+							"name": "Get Coupons",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "app-token",
+										"type": "text",
+										"value": "Wu8J1uo9LNMI"
+									}
+								],
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/data?startDate=29/01/2021 00:00:00&endDate=28/02/2021 23:59:00",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"data"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "29/01/2021 00:00:00"
+										},
+										{
+											"key": "endDate",
+											"value": "28/02/2021 23:59:00"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST Coupon Wallet",
+					"item": [
+						{
+							"name": "Post Wallet - Coupon Inválido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": -1,\n  \"customerCpf\": {{cpfLong}}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - Coupon Inválido Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": null,\n  \"customerCpf\": {{cpfLong}}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - Coupon Inválido Copy 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 150000000000,\n  \"customerCpf\": {{cpfLong}}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - CPF Inválido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 38393,\n  \"customerCpf\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - CPF Inválido Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 38393,\n  \"customerCpf\": -1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - CPF Inválido Copy 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 38393,\n  \"customerCpf\": 81400208000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - CPF Inválido Copy 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 38393,\n  \"customerCpf\": 123456789123\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - Data Inicio Error",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 42990,\n  \"customerCpf\": {{cpfLong}}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - Data Fim Error",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 38393,\n  \"customerCpf\": {{cpfLong}}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - Inativo Error",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 45774,\n  \"customerCpf\": {{cpfLong}}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - Sucesso",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 43133,\n  \"customerCpf\": 57476615077\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - Sucesso Duration Days Nulo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 43131,\n  \"customerCpf\": 57476615077\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Wallet - Duplicated Error",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"couponId\": 43131,\n  \"customerCpf\": 57476615077\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://tst.grupodimedservices.com.br/coupon/v1/coupon/wallet",
+									"protocol": "http",
+									"host": [
+										"tst",
+										"grupodimedservices",
+										"com",
+										"br"
+									],
+									"path": [
+										"coupon",
+										"v1",
+										"coupon",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"function cpf() {",
+					"  const rnd = (n) => Math.round(Math.random() * n);",
+					"  const mod = (base, div) => Math.round(base - Math.floor(base / div) * div)",
+					"  const n = Array(9).fill('').map(() => rnd(9));",
+					"",
+					"  let d1 = n.reduce((total, number, index) => (total + (number * (10 - index))), 0)",
+					"  d1 = 11 - mod(d1, 11);",
+					"  if (d1 >= 10) d1 = 0;",
+					"  ",
+					"  let d2 = (d1 * 2) + n.reduce((total, number, index) => (total + (number * (11 - index))), 0)",
+					"  d2 = 11 - mod(d2, 11);",
+					"  if (d2 >= 10) d2 = 0;",
+					"",
+					"  return `${n.join('')}${d1}${d2}`",
+					"}",
+					"",
+					"// opicional para postman",
+					"pm.environment.set('cpf', cpf());",
+					"pm.environment.set('cpfLong', parseFloat(cpf()));"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "cpf",
+			"value": ""
+		},
+		{
+			"key": "cpfLong",
+			"value": ""
+		}
+	]
+}
